@@ -2,8 +2,7 @@ language: java
 script: ant main
 deploy:
   provider: releases
-  user: "lastviper"
-  password: $GITHUB_PASSWORD
+  api_key: $meintoken
   file: "/build/jar/HelloWorld.jar"
   skip_cleanup: true
   on:
