@@ -2,9 +2,9 @@ language: java
 script: ant main
 deploy:
   provider: releases
-  user: $GITHUB_USERNAME
+  user: "lastviper"
   password: $GITHUB_PASSWORD
   file: "/build/jar/HelloWorld.jar"
   skip_cleanup: true
   on:
-    tags: flase
+    tags: true
