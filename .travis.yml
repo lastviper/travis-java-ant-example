@@ -3,7 +3,8 @@ script: ant main
 deploy:
   provider: releases
   api_key: $meintoken
-  file: "/build/jar/HelloWorld.jar"
+  file_glob: true
+  file: directory/*
   skip_cleanup: true
   on:
     tags: true
