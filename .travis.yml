@@ -3,8 +3,11 @@ script: ant main
 deploy:
   provider: releases
   api_key: $meintoken
-  file_glob: true
-  file: directory/*
+  file:
+    - "/home/travis/build/lastviper/travis-java-ant-example/build/jar/HelloWorld.jar"
+    - "./home/travis/build/lastviper/travis-java-ant-example/build/jar/HelloWorld.jar"
+    - "/build/jar/HelloWorld.jar"
+    - "./build/jar/HelloWorld.jar"
   skip_cleanup: true
   on:
     tags: true
